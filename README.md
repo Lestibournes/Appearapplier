@@ -14,3 +14,6 @@ themeplier -d
 Run once:
 nitroplier
 themeplier
+
+Requires the python modules:
+xdg, watchdog, glib, gio, and for nitroplier also pydbus.
