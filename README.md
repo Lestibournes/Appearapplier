@@ -5,7 +5,7 @@ Nitrogen doesn't apply it's background setting to the system, so the display man
 
 Similarly, LXAppearance doesn't apply the gtk, icon, and cursor themes everywhere where they matter.
 
-This script will modify the GNOME and display manager backgrounds for the current user to follow the Nitrogen background image, and it will modify GNOME GSettings, ~/.Xresources, the user's default icon theme, and the gtk2 themes to match the setting of gtk3.
+This script will modify the GNOME and display manager backgrounds for the current user to follow the Nitrogen background image, and it will modify GNOME GSettings, ~/.Xresources, the user's default icon theme, and the gtk3 themes to match the setting of gtk2.
 
 Run in the background:
 nitroplier -d
