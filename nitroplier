@@ -31,7 +31,7 @@ user = accounts.FindUserByName(user_name)
 # User account proxy object:
 up = bus.get('org.freedesktop.Accounts', user)
 
-class MyHandler(FileSystemEventHandler):
+class NitrogenHandler(FileSystemEventHandler):
 	def on_modified(self, event):
 		apply_background()
 
@@ -52,7 +52,7 @@ if __name__ == "__main__":
 	if "-d" in sys.argv:
 		# Run in the background and apply changes as they happen:
 		observer = Observer()
-		observer.schedule(MyHandler(), path=BaseDirectory.load_first_config("nitrogen"), recursive=False)
+		observer.schedule(NitrogenHandler(), path=BaseDirectory.load_first_config("nitrogen"), recursive=False)
 		observer.start()
 
 		try:
