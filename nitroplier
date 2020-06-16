@@ -49,6 +49,8 @@ def apply_background():
 			return
 
 if __name__ == "__main__":
+	apply_background()
+	
 	if "-d" in sys.argv:
 		# Run in the background and apply changes as they happen:
 		observer = Observer()
@@ -61,6 +63,3 @@ if __name__ == "__main__":
 		except KeyboardInterrupt:
 			observer.stop()
 		observer.join()
-	else:
-		# Apply changes once and exit:
-		apply_background()

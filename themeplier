@@ -89,6 +89,8 @@ def apply_theme():
 	Gio.Settings.new("org.gnome.desktop.interface").set_string("icon-theme", icon_theme)
 
 if __name__ == "__main__":
+	apply_theme()
+	
 	if "-d" in sys.argv:
 		# Run in the background and apply changes as they happen:
 		observer = Observer()
@@ -101,6 +103,3 @@ if __name__ == "__main__":
 		except KeyboardInterrupt:
 			observer.stop()
 		observer.join()
-	else:
-		# Apply changes once and exit:
-		apply_theme()
